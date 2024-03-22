@@ -1,0 +1,53 @@
+{
+  "name": "@rnx-kit/react-native-error-trace-decorator",
+  "version": "1.0.0",
+  "description": "EXPERIMENTAL - USE WITH CAUTION - New package called react-native-error-trace-decorator",
+  "homepage": "https://github.com/microsoft/rnx-kit/tree/main/incubator/react-native-error-trace-decorator#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Microsoft Open Source",
+    "email": "microsoftopensource@users.noreply.github.com"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": "lib/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/rnx-kit",
+    "directory": "incubator/react-native-error-trace-decorator"
+  },
+  "engines": {
+    "node": ">=14.15"
+  },
+  "scripts": {
+    "build": "rnx-kit-scripts build",
+    "format": "rnx-kit-scripts format",
+    "lint": "rnx-kit-scripts lint",
+    "test": "rnx-kit-scripts test"
+  },
+  "devDependencies": {
+    "@rnx-kit/eslint-config": "*",
+    "@rnx-kit/jest-preset": "*",
+    "@rnx-kit/scripts": "*",
+    "@rnx-kit/tsconfig": "*",
+    "@types/node": "^20.0.0",
+    "@types/yargs": "^16.0.0",
+    "eslint": "^8.23.0",
+    "jest": "^29.2.1",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@rnx-kit/console": "^1.0.11",
+    "metro-symbolicate": "^0.80.0",
+    "source-map": "^0.5.6",
+    "yargs": "^16.0.0"
+  },
+  "jest": {
+    "preset": "@rnx-kit/jest-preset/private"
+  },
+  "experimental": true
+}

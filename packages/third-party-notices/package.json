@@ -1,0 +1,51 @@
+{
+  "name": "@rnx-kit/third-party-notices",
+  "version": "1.3.4",
+  "description": "Library and tool to build a third party notices file based on a js bundle's source map",
+  "homepage": "https://github.com/microsoft/rnx-kit/tree/main/packages/third-party-notices#readme",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "build-tpn": "./lib/build-tpn.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/rnx-kit",
+    "directory": "packages/third-party-notices"
+  },
+  "scripts": {
+    "build": "rnx-kit-scripts build",
+    "format": "rnx-kit-scripts format",
+    "lint": "rnx-kit-scripts lint",
+    "test": "rnx-kit-scripts test"
+  },
+  "dependencies": {
+    "@rnx-kit/console": "^1.0.11",
+    "@rnx-kit/tools-node": "^2.0.0",
+    "spdx-expression-parse": "^3.0.1",
+    "yargs": "^16.0.0"
+  },
+  "devDependencies": {
+    "@rnx-kit/eslint-config": "*",
+    "@rnx-kit/jest-preset": "*",
+    "@rnx-kit/metro-serializer": "*",
+    "@rnx-kit/scripts": "*",
+    "@rnx-kit/tsconfig": "*",
+    "@types/jest": "^29.2.1",
+    "@types/node": "^20.0.0",
+    "@types/yargs": "^16.0.0",
+    "eslint": "^8.23.0",
+    "jest": "^29.2.1",
+    "metro-source-map": "^0.80.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "jest": {
+    "preset": "@rnx-kit/jest-preset/private"
+  }
+}

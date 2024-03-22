@@ -1,0 +1,64 @@
+{
+  "name": "@rnx-kit/react-native-lazy-index",
+  "version": "3.0.0",
+  "description": "Hermes/RAM bundle friendly index.js with on-demand loaded modules",
+  "keywords": [
+    "babel",
+    "bundle",
+    "codegen",
+    "index.js",
+    "inline",
+    "lazy",
+    "macro",
+    "on-demand",
+    "performance",
+    "ram",
+    "react",
+    "react-native",
+    "require"
+  ],
+  "homepage": "https://github.com/microsoft/rnx-kit/tree/main/packages/react-native-lazy-index#readme",
+  "license": "MIT",
+  "files": [
+    "src/*.js"
+  ],
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/rnx-kit",
+    "directory": "packages/react-native-lazy-index"
+  },
+  "scripts": {
+    "build": "rnx-kit-scripts build",
+    "format": "rnx-kit-scripts format",
+    "lint": "rnx-kit-scripts lint",
+    "test": "rnx-kit-scripts test"
+  },
+  "dependencies": {
+    "babel-plugin-codegen": "^4.0.0"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.59"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@rnx-kit/eslint-config": "*",
+    "@rnx-kit/jest-preset": "*",
+    "@rnx-kit/scripts": "*",
+    "@rnx-kit/tsconfig": "*",
+    "@types/jest": "^29.2.1",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.23.0",
+    "jest": "^29.2.1",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "depcheck": {
+    "ignoreMatches": [
+      "babel-plugin-codegen"
+    ]
+  },
+  "jest": {
+    "preset": "@rnx-kit/jest-preset/private"
+  }
+}

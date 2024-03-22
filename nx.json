@@ -1,0 +1,60 @@
+{
+  "affected": {
+    "defaultBase": "main"
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/pr.yml",
+      "{workspaceRoot}/nx.json",
+      "{workspaceRoot}/packages/eslint-config/*",
+      "{workspaceRoot}/packages/eslint-plugin/*",
+      "{workspaceRoot}/packages/jest-preset/*",
+      "{workspaceRoot}/scripts/tsconfig-esm.json",
+      "{workspaceRoot}/scripts/tsconfig-shared.json",
+      "{workspaceRoot}/yarn.lock"
+    ],
+    "production": ["default"]
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    },
+    "build:ci": {
+      "cache": true
+    },
+    "bundle": {
+      "dependsOn": ["build"]
+    },
+    "bundle+esbuild": {
+      "dependsOn": ["build"]
+    },
+    "format": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "cache": true
+    },
+    "update-readme": {
+      "dependsOn": ["build"]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "./scripts/nx-tasks-runner.cjs",
+      "options": {
+        "parallel": 0
+      }
+    }
+  },
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": false
+    }
+  }
+}

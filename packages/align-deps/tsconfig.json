@@ -1,0 +1,7 @@
+{
+  "extends": "@rnx-kit/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "alwaysStrict": false
+  },
+  "include": ["src"]
+}

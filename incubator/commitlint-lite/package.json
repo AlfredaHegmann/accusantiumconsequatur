@@ -1,0 +1,53 @@
+{
+  "name": "@rnx-kit/commitlint-lite",
+  "version": "1.0.0",
+  "description": "Lint commit messages",
+  "homepage": "https://github.com/microsoft/rnx-kit/tree/main/incubator/commitlint-lite#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Microsoft Open Source",
+    "email": "microsoftopensource@users.noreply.github.com"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": "lib/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/rnx-kit",
+    "directory": "incubator/commitlint-lite"
+  },
+  "scripts": {
+    "build": "rnx-kit-scripts build",
+    "format": "rnx-kit-scripts format",
+    "lint": "rnx-kit-scripts lint",
+    "test": "rnx-kit-scripts test"
+  },
+  "devDependencies": {
+    "@rnx-kit/eslint-config": "*",
+    "@rnx-kit/jest-preset": "*",
+    "@rnx-kit/scripts": "*",
+    "@rnx-kit/tsconfig": "*",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.23.0",
+    "jest": "^29.2.1",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.18"
+  },
+  "jest": {
+    "preset": "@rnx-kit/jest-preset/private",
+    "resolver": "@rnx-kit/jest-preset/typescript-esm-resolver.cjs"
+  },
+  "experimental": true
+}
